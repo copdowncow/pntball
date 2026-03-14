@@ -1,0 +1,43 @@
+-- =============================================
+-- TAJ PAINTBALL — Seed Data
+-- =============================================
+
+-- Default settings
+INSERT INTO settings (key, value, description) VALUES
+  ('price_per_100_balls', '70', 'Цена за 100 шаров в сомони'),
+  ('prepayment_amount', '50', 'Обязательная предоплата в сомони'),
+  ('min_players', '2', 'Минимальное количество игроков'),
+  ('max_players', '50', 'Максимальное количество игроков'),
+  ('min_balls', '100', 'Минимальное количество шаров'),
+  ('booking_open_days', '30', 'На сколько дней вперед открыто бронирование'),
+  ('club_name', 'Taj Paintball', 'Название клуба'),
+  ('club_phone', '+992 XX XXX XXXX', 'Телефон клуба'),
+  ('club_address', 'Душанбе, Таджикистан', 'Адрес клуба'),
+  ('working_hours', '10:00 - 21:00', 'Часы работы')
+ON CONFLICT (key) DO NOTHING;
+
+-- Default pricing packages
+INSERT INTO pricing (title, balls_count, price, is_active, sort_order) VALUES
+  ('Старт', 100, 70, true, 1),
+  ('Базовый', 200, 140, true, 2),
+  ('Стандарт', 300, 210, true, 3),
+  ('Комфорт', 500, 350, true, 4),
+  ('Про', 700, 490, true, 5),
+  ('Максимум', 1000, 700, true, 6)
+ON CONFLICT DO NOTHING;
+
+-- Default time slots
+INSERT INTO time_slots (slot_time, is_active, sort_order) VALUES
+  ('10:00', true, 1),
+  ('11:00', true, 2),
+  ('12:00', true, 3),
+  ('13:00', true, 4),
+  ('14:00', true, 5),
+  ('15:00', true, 6),
+  ('16:00', true, 7),
+  ('17:00', true, 8),
+  ('18:00', true, 9),
+  ('19:00', true, 10),
+  ('20:00', true, 11)
+ON CONFLICT DO NOTHING;
+
