@@ -242,8 +242,8 @@ export default function HomePage() {
           <h2 className="section-title mb-8 text-center">Контакты</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             {[
-              { icon: '📍', title: 'Адрес', val: 'Душанбе, Таджикистан' },
-              { icon: '📞', title: 'Телефон', val: '+992 XX XXX XXXX', href: 'tel:+992000000000' },
+              { icon: '📍', title: 'Адрес', val: 'Чордомаи Аэропорт, рядом с клиникой «Нигох»' },
+              { icon: '📞', title: 'Телефон', val: '+992 50 213 14 15', href: 'tel:+992502131415' },
               { icon: '🕐', title: 'Режим работы', val: 'Ежедневно 10:00 – 21:00' },
             ].map(c => (
               <div key={c.title} className="card p-5 text-center">
@@ -256,7 +256,7 @@ export default function HomePage() {
             ))}
           </div>
           {/* Call button */}
-          <a href="tel:+992000000000"
+          <a href="tel:+992502131415"
             className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-700 active:bg-green-800 text-white font-bold py-4 rounded-2xl text-base transition-colors"
             style={{ WebkitTapHighlightColor: 'transparent' }}>
             📞 Позвонить нам
